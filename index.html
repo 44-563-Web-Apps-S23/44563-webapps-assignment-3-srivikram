@@ -73,16 +73,44 @@
         </tr>
         <tr>
             <td>Australia</td>
-            <td>Natural beauty with beaches, rainforests, wildlife and iconic landmarks such as the Sydney Opera House and Uluru (Ayers Rock).</td>
+            <td>Natural beauty with beaches, rainforests, wildlife and iconic landmarks such as the Sydney Opera House
+                and Uluru (Ayers Rock).</td>
             <td>10-14 Days</td>
 
         </tr>
         <tr>
             <td>Iceland</td>
-            <td>Surreal landscapes with glaciers, hot springs, waterfalls, Aurora Borealis, Adventure Activities, Cultural Experience and Scenic Drives.</td>
+            <td>Surreal landscapes with glaciers, hot springs, waterfalls, Aurora Borealis, Adventure Activities,
+                Cultural Experience and Scenic Drives.</td>
             <td>7-10 Days</td>
         </tr>
     </table>
+
+    <hr>
+    <h3> Sample Code Snippet </h3>
+    <h4> Code Snippet: </h4>
+    <a href=" https://css-tricks.com/snippets/jquery/make-entire-div-clickable/"> 
+        Click here for css-tricks question snippet rerference link
+    </a>
+    <pre>
+        <a href="http://example.com">
+            <div>
+               anything
+            </div>
+          </a>
+          $(".myBox").click(function() {
+            window.location = $(this).find("a").attr("href"); 
+            return false;
+          });
+          <div class="myBox">
+            blah blah blah.
+            <a href="http://google.com">link</a>
+          </div>
+          window.location = $(".myBox").data("location");
+    </pre>
+    <h4> Question from stackover flow</h4>
+    <blockquote cite="https://stackoverflow.com/questions/5270599/make-div-clickable-with-jquery">make div clickable
+        with jquery</blockquote>
 </body>
 
 </html>
