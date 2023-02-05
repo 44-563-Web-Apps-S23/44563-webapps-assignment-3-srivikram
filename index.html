@@ -88,29 +88,37 @@
 
     <hr>
     <h3> Sample Code Snippet </h3>
-    <h4> Code Snippet: </h4>
-    <a href=" https://css-tricks.com/snippets/jquery/make-entire-div-clickable/"> 
+    <h4> Code Snippet from css-tricks: </h4>
+    <a href="https://css-tricks.com/snippets/jquery/check-if-element-exists/">
         Click here for css-tricks question snippet rerference link
     </a>
     <pre>
-        <a href="http://example.com">
-            <div>
-               anything
-            </div>
-          </a>
-          $(".myBox").click(function() {
-            window.location = $(this).find("a").attr("href"); 
-            return false;
-          });
-          <div class="myBox">
-            blah blah blah.
-            <a href="http://google.com">link</a>
-          </div>
-          window.location = $(".myBox").data("location");
+        if ($('#myElement').length > 0) { 
+            // it exists 
+        }
+        // Tiny jQuery Plugin
+        // by Chris Goodchild
+        $.fn.exists = function(callback) {
+        var args = [].slice.call(arguments, 1);
+
+        if (this.length) {
+            callback.call(this, args);
+        }
+
+        return this;
+        };
+
+        // Usage
+        $('div.test').exists(function() {
+        this.append('I exist!');
+        });
     </pre>
     <h4> Question from stackover flow</h4>
-    <blockquote cite="https://stackoverflow.com/questions/5270599/make-div-clickable-with-jquery">make div clickable
-        with jquery</blockquote>
+    <blockquote>
+        <a href="https://stackoverflow.com/questions/4592493/check-if-element-exists-in-jquery">
+            Check if element exists in jQuery
+        </a>
+    </blockquote>
 </body>
 
 </html>
